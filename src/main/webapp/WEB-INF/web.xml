@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>crm</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <servlet>
+    <servlet-name>UserController</servlet-name>
+    <servlet-class>com.bjpowernode.crm.settings.web.controller.UserController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserController</servlet-name>
+    <url-pattern>/setting/user/login.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ActivityController</servlet-name>
+    <servlet-class>com.bjpowernode.crm.workbench.web.controller.ActivityController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ActivityController</servlet-name>
+    <url-pattern>/workbench/Activity/getUserList.do</url-pattern>
+    <url-pattern>/workbench/Activity/saveActivity.do</url-pattern>
+    <url-pattern>/workbench/Activity/pageList.do</url-pattern>
+    <url-pattern>/workbench/Activity/delete.do</url-pattern>
+    <url-pattern>/workbench/Activity/getUserListandActivityById.do</url-pattern>
+    <url-pattern>/workbench/Activity/update.do</url-pattern>
+    <url-pattern>/workbench/Activity/detail.do</url-pattern>
+    <url-pattern>/workbench/Activity/getRemarkList.do</url-pattern>
+    <url-pattern>/workbench/Activity/deleteById.do</url-pattern>
+    <url-pattern>/workbench/Activity/deleteRemark.do</url-pattern>
+    <url-pattern>/workbench/Activity/saveRemark.do</url-pattern>
+    <url-pattern>/workbench/Activity/updateRemark.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>ClueController</servlet-name>
+    <servlet-class>com.bjpowernode.crm.workbench.web.controller.ClueController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClueController</servlet-name>
+    <url-pattern>/workbench/Clue/getUserList.do</url-pattern>
+    <url-pattern>/workbench/Clue/saveClue.do</url-pattern>
+    <url-pattern>/workbench/Clue/pageList.do</url-pattern>
+    <url-pattern>/workbench/Clue/detail.do</url-pattern>
+    <url-pattern>/workbench/Clue/ShowActivityList.do</url-pattern>
+    <url-pattern>/workbench/Clue/deleteActivityList.do</url-pattern>
+    <url-pattern>/workbench/Clue/getActivity.do</url-pattern>
+    <url-pattern>/workbench/Clue/Bound.do</url-pattern>
+    <url-pattern>/workbench/Clue/getActivityByName.do</url-pattern>
+    <url-pattern>/workbench/Clue/convert.do</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>TranController</servlet-name>
+    <servlet-class>com.bjpowernode.crm.workbench.web.controller.TranController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TranController</servlet-name>
+    <url-pattern>/workbench/transaction/add.do</url-pattern>
+    <url-pattern>/workbench/transaction/ShowActivityList.do</url-pattern>
+    <url-pattern>/workbench/transaction/ShowContactsList.do</url-pattern>
+    <url-pattern>/workbench/transaction/getCustomerName.do</url-pattern>
+    <url-pattern>/workbench/transaction/save.do</url-pattern>
+    <url-pattern>/workbench/transaction/detail.do</url-pattern>
+    <url-pattern>/workbench/transaction/getHistoryListById.do</url-pattern>
+    <url-pattern>/workbench/transaction/changeStage.do</url-pattern>
+    <url-pattern>/workbench/transaction/getCharts.do</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.bjpowernode.crm.web.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>LoginFilter</filter-name>
+    <filter-class>com.bjpowernode.crm.web.filter.LoginFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>LoginFilter</filter-name>
+    <url-pattern>*.do</url-pattern>
+    <url-pattern>*.jsp</url-pattern>
+  </filter-mapping>
+  <listener>
+    <listener-class>com.bjpowernode.crm.web.listener.SysInitListener</listener-class>
+  </listener>
+</web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
